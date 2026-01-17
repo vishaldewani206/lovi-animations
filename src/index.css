@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Rebound Regular";
+  src: url("/fonts/rebound-regular.woff2");
+}
+
+@font-face {
+  font-family: "Rebound Bold";
+  font-weight: bold;
+  src: url("/fonts/rebound-regular.woff2");
+}
+
+@font-face {
+  font-family: "Greit Regular";
+  src: url("/fonts/greit-regular.woff2");
+}
+
+@font-face {
+  font-family: "Greit Bold";
+  font-weight: bold;
+  src: url("/fonts/greit-regular.woff2");
+}
+
+@theme {
+  --font-sans: "Greit Regular", sans-serif;
+  --font-sans-bold: "Greit Bold", sans-serif;
+  --font-rebound: "Rebound Regular", sans-serif;
+  --font-rebound-bold: "Rebound Bold";
+  --color-primary: #151581;
+
+}
+
+
+body{
+  width: 100dvw;
+  overflow-x: hidden;
+  font-family: "Greit Regular", sans-serif;
+  background-color: #F8F8F8;
+}
+
+button{
+  @apply cursor-pointer focus:outline-none focus:border-blue-700 focus:border-2;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .col-center {
+    @apply flex flex-col justify-center items-center;
+  }
+  .abs-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+}
+
+@layer components{
+  nav{
+    @apply flex justify-between items-center max-w-300 w-full z-60;
+
+    button {
+      @apply md:rounded-2xl rounded-xl scale-80 md:scale-100 md:px-5 md:py-2 px-3 py-2 bg-primary text-white drop-shadow-xl hover:opacity-75 z-20 ;
+      img {
+        @apply md:w-5 md:h-5 w-4 h-4 invert;
+      }
+    }
+  }
+
+  .top{
+    @apply flex w-full justify-center mt-18;
+    .award{
+      @apply flex justify-center items-center gap-2 rounded-2xl drop-shadow-gray-300 drop-shadow-md bg-white px-2 py-1 hover:opacity-75 text-sm;
+      img{
+        @apply w-6 h-6;
+      }
+    }
+  }
+
+  .girl{
+    @apply w-full h-full relative ;
+    video{
+      @apply w-full h-full object-cover object-center;
+    }
+    .screen{
+      @apply w-80 absolute top-40  -translate-x-1/2 left-1/2;
+
+      .screen-inner{
+        @apply w-full h-full text-center z-40 absolute top-0 py-17  flex flex-col justify-between ;
+      }
+    }
+    
+  }
+}
+
+.blur{
+  @apply  backdrop-blur-sm w-full h-7 fixed top-0 z-10;
+}
+
+
+.overlay{
+ @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(
+    to top,
+    rgba(255,255,255,1) 5%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255,255,255,0) 70%
+  );
+
+    }
