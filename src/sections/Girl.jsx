@@ -1,27 +1,27 @@
-import { useGSAP } from "@gsap/react"
+import { ScreenInner } from "../components/ScreenInner"
+import {  useState } from "react"
 
 export const Girl = () => {
-  useGSAP(()=>{
+  const [steps, setSteps] = useState(1)
 
-  },[])
+  const url = ()=>{
+    if(steps == 1){
+      return "/videos/first.mp4"
+    }else if(steps == 2){
+      return "/videos/before.mp4"
+    }else{
+      return "/videos/main.mp4"
+    }
+  }
 
   return (
     <div className="girl">
       <div className="w-full h-full relative">
-        <video src="/videos/before.mp4" autoPlay muted loop preload="auto" playsInline ></video>
-        <div class="overlay" />
+        <video  src={url()} autoPlay muted loop preload="auto" playsInline ></video>
+        <div className="overlay" />
         <div className="screen">
           <img src="/images/screen.png" alt="screen"  />
-          <div className="screen-inner">
-            <h2 className="text-2xl text-white">
-              Here’s a set of <br/>
-              tailored skincare:
-            </h2>
-            <div className="mb-4 w-full p-4 overflow-hidden ">
-              <div className="w-24 h-28 bg-amber-500 rounded-xl"></div>
-            </div>
-
-          </div>
+          <ScreenInner setSteps={setSteps} steps={steps} />
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 export const getImages = ()=>{
-  const length = 9;
+  const length = 4;
   const images = []
 
   for(let i = 1; i <= length; i++){
-    images.push("/images/" + i + ".png")
+    images.push("/images/product-" + i + ".avif")
   }
 
   return images;

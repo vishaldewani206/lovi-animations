@@ -2,19 +2,25 @@
 export const Top = () => {
   return (
     <section className='top'>
-      <div className='max-w-96 flex flex-col items-center mt-4'>
+      <div className='max-w-96 flex flex-col items-center md:mt-4'>
         <button className='award'>
           <img src="/images/award.avif" alt="award" />
           <p>Lovi won Beauty Innovation Award!</p>
         </button>
 
-        <h1 className='text-5xl text-primary mt-4 text-center font-rebound '>
+        <h1 className='md:text-5xl text-3xl text-primary mt-4 text-center font-rebound '>
           Science-backed <br/>
           AI Cosmetologist <br/>
           you can trust
         </h1>
-        <p className='mt-4 text-primary'>Focused around you and your beauty</p>
-
+        <p className='mt-4 text-primary hidden md:block '>Focused around you and your beauty</p>
+        <button className='download-btn mt-3 flex md:hidden justify-center items-center gap-2 '>
+          <img src="/images/apple-logo.png" alt="apple logo" />
+          <div>
+            <p className='md:text-xs text-[10px] -mb-1'>Download on the</p>
+            <h2 className='md:text-xl text-md font-bold'>App Store</h2>
+          </div>
+        </button>
       </div>
     </section>
   )
