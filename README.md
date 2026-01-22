@@ -1,16 +1,34 @@
-# React + Vite
+# Lovi.care Website Recreation (GSAP + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern recreation of the **lovi.care** website focused on smooth, high-performance animations using **GSAP** in **React**.  
+This project demonstrates scroll-based interactions, timeline animations, and clean motion design.
 
-Currently, two official plugins are available:
+## 🔗 Original Website
+https://lovi.care
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Preview
+_https://lovi-animations.vercel.app_
 
-## React Compiler
+## 🛠 Tech Stack
+- React (Vite)
+- GSAP
+- GSAP ScrollTrigger
+- Tailwind CSS
+- JavaScript
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
+- Smooth scroll-based animations
+- GSAP timelines for complex sequences
+- ScrollTrigger-powered effects
+- Responsive layout
+- Clean and reusable animation logic
+- High-performance animations
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/vishaldewani206/lovi-animations
+cd lovi-animations
+npm install
+npm run dev
+```
