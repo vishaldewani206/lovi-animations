@@ -95,3 +95,34 @@ export const useScreenBoxSettings = () => {
     },
   ];
 };
+
+export const useMobileSettings = ()=>{
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1024 });
+
+  if(isMobile) return {x: 100}
+
+  if(isTablet) return {x: 200}
+
+  return {
+    x: 250
+  }
+}
+
+export const useImageSettings = ()=>{
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  if(isMobile){
+    return {
+      first: 70,
+      second: 10,
+      from: 300
+    }
+  }
+
+  return{
+    first: 70,
+    second: 10,
+    from: 300
+  }
+}

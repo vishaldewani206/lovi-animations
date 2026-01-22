@@ -1,6 +1,7 @@
+import { useGSAP } from "@gsap/react"
 import { ScreenInner } from "../components/ScreenInner"
 import {  useState } from "react"
-
+import gsap from "gsap"
 export const Girl = () => {
   const [steps, setSteps] = useState(1)
 
@@ -14,10 +15,19 @@ export const Girl = () => {
     }
   }
 
+  useGSAP(()=>{
+    gsap.from(".girl", {
+      opacity: 0,
+      scale: 0.8,
+      delay: 0.3,
+      ease: 'sine.out'
+    })
+  },[])
+
   return (
     <div className="girl">
       <div className="w-full h-full relative">
-        <video  src={url()} autoPlay muted loop preload="auto" playsInline ></video>
+        <video  src={url()} autoPlay muted loop preload="auto" playsInline poster="/images/poster.avif"></video>
         <div className="overlay" />
         <div className="screen">
           <img src="/images/screen.png" alt="screen"  />

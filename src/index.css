@@ -89,7 +89,7 @@ button{
   .girl{
     @apply w-full h-140 md:h-220 lg:h-full relative  md:mt-0 ;
     video{
-      @apply w-[160%] h-full object-cover object-center ;
+      @apply w-full h-full object-cover object-center ;
     }
     .screen{
       @apply w-64 md:w-90 absolute top-12  -translate-x-1/2 left-1/2;
@@ -107,6 +107,32 @@ button{
     }
     
   }
+
+  .text{
+    @apply flex flex-col w-full items-center;
+    .animate-me {
+      @apply text-primary md:text-4xl text-2xl font-rebound  p-2 text-left perspective-normal;
+  }
+  }
+  .mobile{
+    @apply md:mt-20 relative;
+    video, img{
+      @apply md:w-65 w-35;
+    }
+    video{
+      @apply z-10 bg-transparent;
+    }
+    img{
+      @apply absolute z-0 ;
+    }
+  }
+  
+  .questions{
+    @apply space-y-3;
+    p{
+      @apply md:text-2xl text-lg text-primary border-b pb-4 border-b-primary/35 ;
+    }
+  }
 }
 
 .blur{
@@ -123,3 +149,4 @@ button{
     rgba(255,255,255,0) 70%
   );
 }
+

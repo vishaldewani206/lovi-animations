@@ -1,5 +1,15 @@
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
+
 
 export const Top = () => {
+  useGSAP(()=>{
+    gsap.from(".top", {
+      opacity: 0,
+      scale: 0.8,
+      ease: 'sine.out'
+    })
+  },[])
   return (
     <section className='top'>
       <div className='max-w-96 flex flex-col items-center md:mt-4'>
